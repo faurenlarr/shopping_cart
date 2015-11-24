@@ -10,7 +10,7 @@ angular
     .config(function ($routeProvider) {
         $routeProvider
           .when('/', {
-            template: '<h1>ebae</h1><a href="#/admin">Login as Admin</a><a href="#/customer">Login as Customer</a>',
+            template: '<h2>{ ebae }</h2><article><a href="#/admin" class="admin">Log in as Admin</a></article><article><a href="#/customer" class="customer">Log in as Customer</a></article>',
             controller: 'MainController'
           })
 
@@ -20,12 +20,16 @@ angular
           .when('/customer', {
             templateUrl: 'views/customer/list.html',
             controller: 'CustController'
-
           })
+
+          .when('/customer/:baeId', {
+          templateUrl: 'views/customer/show.html',
+          controller: 'CustController'
+        })
+
           .when('/customer/cart', {
             templateUrl: 'views/customer/cart.html',
             controller: 'CartController'
-
           })
 
 
@@ -51,6 +55,16 @@ angular
       });
 
 
+      angular
+          .module('underscore', [])
+          .factory('_', function ($window) {
+            return $window._;
+          });
+        angular
+          .module('moment', [])
+          .factory('moment', function ($window) {
+            return $window.moment;
+          });
 
 
 

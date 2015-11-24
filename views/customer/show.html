@@ -1,0 +1,17 @@
+<!--customer view-->
+<section class="detail" data-id="{{bae.id}}">
+
+
+  <div ng-repeat="boy in BoyFace">
+    <h6 class="title">{{boy.title}}</h6>
+    <img ng-src="{{boy.image}}" alt="" />
+    <h6 class="price">price: {{boy.price}}</h6>
+    <h6 class="description">{{boy.description}}</h6>
+
+    <button type="button" class="buttontwo"  name="button"><a href="#/customer">Return to catalog</a></button>
+    <input></input>
+    <button class="submit" ng-click="addReview(boy)">Submit Review</button>
+  </div>
+
+
+</section>

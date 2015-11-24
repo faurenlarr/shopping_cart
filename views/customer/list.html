@@ -3,8 +3,8 @@
 <div ng-repeat="boy in BoyFace">
   <h6 class="title">{{boy.title}}</h6>
   <img ng-src="{{boy.image}}" alt="" />
-  <h6 class="price">{{boy.price}}</h6>
-  <h6 class="description">{{boy.description}}</h6>
+  <h6 class="price">price: {{boy.price}}</h6>
+  <button type="text" class="seedetails"><a href="#/customer/{{boy._id}}" data-id={{boy._id}}>See Details</a></button>
 
   <button type="text" ng-click="addToCart(boy)" class="add">ADD TO CART</button>
   <button type="text" class="gotocart" ng-click="getBae(boy)"><a href="#/customer/cart">GO TO CART</a></button>

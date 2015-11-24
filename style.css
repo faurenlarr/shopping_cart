@@ -1,18 +1,47 @@
 body {
-  color: white;
-  background-color: rgba(135, 129, 170, 0.52);
+  color: #f9f2e5;
+  background-color: #8c4155;
   text-align: center;
   font-size: 80px;
   font-family: 'Raleway Dots'; }
 
+article {
+  background-color: #f9f2e5;
+  width: 35%;
+  margin: 30px;
+  border-radius: 10px;
+  display: inline-block; }
+  article .customer, article .admin {
+    font-size: 50px;
+    color: #8c4155;
+    font-weight: bold; }
+
+.description {
+  font-size: 20px;
+  font-weight: bold;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid #f9f2e5;
+  padding: 10px;
+  background-color: #f9f2e5;
+  color: #8c4155; }
+
+.seedetails a {
+  color: black; }
+
 .title {
   margin: 10px;
   margin-top: 148px;
-  font-size: 60px;
-  -webkit-text-stroke: 0.5px #6d4074; }
+  font-size: 40px;
+  -webkit-text-stroke: .5px #f9f2e5;
+  color: #f9f2e5; }
 
 .price {
-  margin: 0; }
+  margin: 0;
+  color: #f9f2e5;
+  font-size: 20px;
+  margin-bottom: 20px; }
 
 input {
   padding: 20px;
@@ -25,35 +54,36 @@ button {
   width: 15%;
   padding: 10px;
   border-radius: 10px;
-  background-color: #6d4074;
-  color: white;
+  background-color: #f9f2e5;
+  color: black;
   font-size: 15px;
-  border: 2px solid #6d4074;
+  border: 2px solid #f9f2e5;
   font-family: 'Raleway Dots';
   font-weight: bold; }
 
 .buttontwo a {
-  color: white; }
+  color: black; }
 
 .addanotherface {
   font-size: 20px;
-  border: 2px solid #6d4074;
-  margin-bottom: 100px; }
+  border: 2px solid #f9f2e5;
+  margin-bottom: 100px;
+  color: black; }
   .addanotherface a {
     text-decoration: none;
-    color: white; }
+    color: black; }
 
 .gallery {
   margin: 0; }
 
 img {
-  border: 4px solid #6d4074;
-  width: 50%;
+  border: 6px solid #f9f2e5;
+  width: 45%;
   display: inline-block; }
 
 a {
   text-decoration: none;
-  color: #6d4074; }
+  color: #f9f2e5; }
 
 .delete {
   font-size: 12px;
@@ -67,4 +97,14 @@ a {
   margin-bottom: 90px; }
 
 .gotocart a {
-  color: white; }
+  color: black; }
+
+h6, h5, h2 {
+  color: #f9f2e5; }
+
+.textarea {
+  width: 25%;
+  display: block; }
+
+.submit {
+  display: inline-block; }

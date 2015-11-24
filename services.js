@@ -18,12 +18,26 @@ angular.
                 var removeBoy = function(boy){
                   $http.delete(url+'/'+boy._id); //create function here, pass in below, call deleteFaces in controllers
                 };
+                //
+                var addReview = function(rev){
+                  $http.post(url, rev).then(function(thingy){
+                    console.log(thingy);
+                  });
+                };
+
+                var seeDetails = function(baeId){
+                  return $http.get(url + "/" + baeId);
+                };
 
                 return {
                   createBoy: addBoy,
                   getBoy: getBoy,
-                  deleteBoy: removeBoy //left side is being defined here, right side has to already exist.
+                  deleteBoy: removeBoy ,
+                  addReview: addReview,
+                  seeDetails : seeDetails
+                    //left side is being defined here, right side has to already exist.
                 };
+
 
 
   });
@@ -57,7 +71,8 @@ angular.
                   return {
                     addToCart: addToCart,
                     removeBaefromCart: removeBaefromCart,
-                    getBae: getBae
+                    getBae: getBae,
+
                   };
 
 
