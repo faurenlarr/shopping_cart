@@ -1,0 +1,12 @@
+<!--admin-->
+
+<h2 class='gallery'>Bae Store</h2>
+<button type="text" class="addanotherface"><a href="#/admin/addBoyfriend">ADD ANOTHER BAE</a></button>
+<div ng-repeat="boy in BoyFace">
+  <h6 class="title">{{boy.title}}</h6>
+  <img ng-src="{{boy.image}}" alt="" />
+  <h6 class="price">{{boy.price}}</h6>
+  <button type="text" ng-click="removeBoy(boy)"  class="delete">DELETE THIS BAE</button>
+</div>
+
+<!--wiig in bestfaces ==== wiig is defined in this page and has to be input into every aspect of template and then passed into the removeFace at the end. BestFaces is my FacesServices component.

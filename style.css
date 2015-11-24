@@ -1,0 +1,73 @@
+body {
+  color: white;
+  background-color: rgba(135, 129, 170, 0.52);
+  text-align: center;
+  font-size: 80px;
+  font-family: 'Raleway Dots'; }
+
+.title {
+  margin: 0;
+  font-size: 60px;
+  -webkit-text-stroke: 0.5px #6d4074; }
+
+input {
+  padding: 20px;
+  width: 25%;
+  font-size: 30px;
+  font-family: 'Raleway Dots';
+  font-weight: bold; }
+
+button {
+  width: 15%;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #6d4074;
+  color: white;
+  font-size: 15px;
+  border: 2px solid #6d4074;
+  font-family: 'Raleway Dots';
+  font-weight: bold; }
+
+.buttontwo a {
+  color: white; }
+
+.addanotherface {
+  font-size: 20px;
+  border: 2px solid #6d4074;
+  margin-bottom: 100px; }
+  .addanotherface a {
+    text-decoration: none;
+    color: white; }
+
+.gallery {
+  margin: 0; }
+
+img {
+  border: 4px solid #6d4074;
+  width: 30%;
+  display: inline-block; }
+
+a {
+  text-decoration: none;
+  color: #6d4074; }
+
+.delete {
+  font-size: 12px;
+  font-family: 'Raleway Dots';
+  font-weight: bold;
+  padding: 10px;
+  width: 10%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 90px; }
+
+  .add {
+    display: block;
+    margin-left: 610px;
+    margin-bottom: 0px;
+  }
+
+  .price {
+    margin-top: 0;
+  }
