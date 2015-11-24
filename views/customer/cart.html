@@ -1,7 +1,8 @@
 <h2 class='gallery'>Shopping Cart</h2>
+
 <div ng-repeat="boy in BoyFace">
   <h6 class="title">{{boy.title}}</h6>
   <img ng-src="{{boy.image}}" alt="" />
   <h6 class="price">{{boy.price}}</h6>
-  <button type="text" ng-click="removeBaefromCart(boy)"  class="delete">DELETE THIS BAE</button>
+  <button type="text" ng-click="removeBaefromCart(boy._id)"  class="delete">DELETE THIS BAE</button>
 </div>

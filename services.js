@@ -31,7 +31,7 @@ angular.
   angular.
     module('boyfriend')
     .factory('CartService', function($http) {
-        var url = 'http://tiny-tiny.herokuapp.com/collections/ebaecart';
+        var url = 'https://tiny-tiny.herokuapp.com/collections/ebaecart';
 
               var addToCart = function (bae) {
                      $http.post(url, bae).then(function (res) {
@@ -39,18 +39,25 @@ angular.
                      });
                   };
 
-  
-                  var getBoy = function () {
+
+                  var getBae = function () {
                     return $http.get(url);
                   };
 
                   var removeBaefromCart= function(boy){
-                    $http.delete(url+'/'+boy._id); //create function here, pass in below, call deleteFaces in controllers
+                    var newUrl = url + "/" + boy;
+                    console.log(newUrl);
+                    $http.delete(newUrl).success(function(data) {
+                      console.log("SUCCESS", data);
+                    }).error(function(data) {
+                      console.log("ERROR", data);
+                    });
                   };
 
                   return {
                     addToCart: addToCart,
-                    removeBaefromCart : removeBaefromCart
+                    removeBaefromCart: removeBaefromCart,
+                    getBae: getBae
                   };
 
 

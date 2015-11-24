@@ -18,12 +18,15 @@ angular
               $scope.newBoy.title="";
               $scope.newBoy.image="";
               $scope.newBoy.price="";
+              $scope.newBoy.description="";
+
 
             };
 
            $scope.thingy = function (newBoy) {
                   BoyService.createBoy(newBoy);
                   setTimeout(clearForm,25);
+                  alert('added to catalog');
 
                 };
 
@@ -42,16 +45,18 @@ angular
         $scope.BoyFace = boy;
       });
 
-
-            var clearForm = function(boy){
-              $scope.newBoy.title="";
-              $scope.newBoy.image="";
-              $scope.newBoy.price="";
-
-            };
+            //
+            // var clearForm = function(boy){
+            //   $scope.newBoy.title="";
+            //   $scope.newBoy.image="";
+            //   $scope.newBoy.price="";
+            //
+            // };
 
             $scope.addToCart = function(bae) {
               CartService.addToCart(bae);
+              alert('added to cart');
+
             };
 
 
@@ -59,19 +64,22 @@ angular
 
 
   })
-  .controller('CartController', function ($scope, BoyService, CartService) { //$routeParams
+  .controller('CartController', function ($scope, CartService) { //$routeParams
 
 
           CartService.getBae().success(function (bae) {
-            console.log(bae);
-            $scope.BoyFace = boy;
+            $scope.BoyFace = bae;
           });
 
+          $scope.removeBaefromCart = function(baeID){
+            CartService.removeBaefromCart(baeID);
+          };
 
 
-            $scope.addToCart = function(bae) {
-              CartService.addToCart(bae);
-            };
+            // $scope.addToCart = function(bae) {
+            //   CartService.addToCart(bae);
+            //
+            // };
 
 
 

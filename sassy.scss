@@ -7,9 +7,13 @@ body {
 }
 
 .title {
-  margin: 0;
+  margin: 10px;
+margin-top: 148px;
   font-size: 60px;
   -webkit-text-stroke: .5px rgb(109, 64, 116);
+}
+.price {
+  margin: 0;
 }
 
 input {
@@ -70,4 +74,7 @@ img {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 90px;
+}
+.gotocart a {
+  color: white;
 }

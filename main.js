@@ -22,6 +22,11 @@ angular
             controller: 'CustController'
 
           })
+          .when('/customer/cart', {
+            templateUrl: 'views/customer/cart.html',
+            controller: 'CartController'
+
+          })
 
 
 

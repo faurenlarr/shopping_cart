@@ -6,9 +6,13 @@ body {
   font-family: 'Raleway Dots'; }
 
 .title {
-  margin: 0;
+  margin: 10px;
+  margin-top: 148px;
   font-size: 60px;
   -webkit-text-stroke: 0.5px #6d4074; }
+
+.price {
+  margin: 0; }
 
 input {
   padding: 20px;
@@ -44,7 +48,7 @@ button {
 
 img {
   border: 4px solid #6d4074;
-  width: 30%;
+  width: 50%;
   display: inline-block; }
 
 a {
@@ -62,12 +66,5 @@ a {
   margin-right: auto;
   margin-bottom: 90px; }
 
-  .add {
-    display: block;
-    margin-left: 610px;
-    margin-bottom: 0px;
-  }
-
-  .price {
-    margin-top: 0;
-  }
+.gotocart a {
+  color: white; }
