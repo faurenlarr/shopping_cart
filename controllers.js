@@ -42,19 +42,17 @@ angular
 
 
 
-      if($routeParams.baeId) {
-        console.log('oh shit');
+
         BoyService.seeDetails($routeParams.baeId).success(function(data){
-          console.log(data);
-          $scope.BoyFace = [data];
+          console.log("custdetail" ,data);
+          $scope.Bae = data;
         });
-      } else {
+
         BoyService.getBoy().success(function (boy) {
-          console.log("DOUBLE WHAMMY");
           console.log(boy);
           $scope.BoyFace = boy;
         });
-      }
+
 
             $scope.addReview = function(rev){
               BoyService.addReview(rev);
@@ -71,20 +69,17 @@ angular
   })
   .controller('CartController', function ($scope, CartService) { //$routeParams
 
+        $scope.testmessage = "string";
 
-          CartService.getBae().success(function (bae) {
-            $scope.BoyFace = bae;
+          CartService.getBoy().success(function (bae) {
+            console.log(bae);
+            $scope.CartBaes = bae;
           });
 
           $scope.removeBaefromCart = function(baeID){
+            console.log("HEOFS",baeID);
             CartService.removeBaefromCart(baeID);
           };
-
-
-            // $scope.addToCart = function(bae) {
-            //   CartService.addToCart(bae);
-            //
-            // };
 
 
 

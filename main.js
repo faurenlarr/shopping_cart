@@ -4,8 +4,8 @@
 angular
     .module('boyfriend', [
         'ngRoute',
-        // 'underscore',
-        // 'moment'
+        'underscore',
+        'moment'
     ])
     .config(function ($routeProvider) {
         $routeProvider
@@ -27,7 +27,7 @@ angular
           controller: 'CustController'
         })
 
-          .when('/customer/cart', {
+          .when('/cart', {
             templateUrl: 'views/customer/cart.html',
             controller: 'CartController'
           })

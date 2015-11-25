@@ -26,6 +26,7 @@ angular.
                 };
 
                 var seeDetails = function(baeId){
+                  console.log("service",baeId);
                   return $http.get(url + "/" + baeId);
                 };
 
@@ -48,30 +49,32 @@ angular.
         var url = 'https://tiny-tiny.herokuapp.com/collections/ebaecart';
 
               var addToCart = function (bae) {
+                // delete bae._id;
                      $http.post(url, bae).then(function (res) {
                        console.log(res);
                      });
                   };
 
 
-                  var getBae = function () {
+                  var getBoy = function () {
                     return $http.get(url);
                   };
 
                   var removeBaefromCart= function(boy){
                     var newUrl = url + "/" + boy;
                     console.log(newUrl);
-                    $http.delete(newUrl).success(function(data) {
-                      console.log("SUCCESS", data);
-                    }).error(function(data) {
-                      console.log("ERROR", data);
+                    $http.delete(newUrl).then(
+                      function(data) {
+                      console.log("SUCCY", data);
+                      },function(data) {
+                      console.log("ERRONEOUS", data);
                     });
                   };
 
                   return {
                     addToCart: addToCart,
                     removeBaefromCart: removeBaefromCart,
-                    getBae: getBae,
+                    getBoy: getBoy,
 
                   };
 
