@@ -1,0 +1,11 @@
+<h2 class='gallery'>Bae Store</h2>
+
+<div ng-repeat="boy in BoyFace">
+  <h6 class="title">{{boy.title}}</h6>
+  <img ng-src="{{boy.image}}" alt="" />
+  <h6 class="price">price: {{boy.price}}</h6>
+  <button type="text" class="seedetails"><a href="#/customer/{{boy._id}}" >See Details</a></button>
+
+  <button type="text" ng-click="addToCart(boy)" class="add">ADD TO CART</button>
+  <a href="#/cart" ng-click="getBoy(boy)"><button type="text" class="gotocart" >GO TO CART</button></a>
+</div>
